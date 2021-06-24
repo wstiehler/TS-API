@@ -21,16 +21,15 @@ response = requests.post(url=url, json=product_data_post)
 
 #________________________________________________________
 
+print('\n','='*40, 'Imprimindo requisições', '='*40 ,'\n')
 
 if response.status_code >= 200 and response.status_code <= 299:
-    print('sucesso')
     print('Status code', response.status_code)
     print('Reason', response.text)
     print('Texto', response.content)
     print('JSON', response.json())
 
 else:
-    print('erros')
     print('Status code', response.status_code)
     print('Reason', response.text)
     print('Texto', response.content)
